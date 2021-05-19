@@ -1,0 +1,61 @@
+version: '3.7'
+services:
+  #Nginx Service
+  web:
+    image: nginx:alpine
+    container_name: ${NGINX_CONTAINER_NAME}
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "${PORT_HTTP}:80"
+      - "${PORT_HTTPS}:443"
+    volumes:
+      - ./etc/nginx/conf.d/:/etc/nginx/conf.d/
+      - ${APP_PATH}:/var/www/html
+    networks:
+      - this-net
+      - proxy
+
+  # PHP-FPM
+  php:
+    build:
+      context: ./etc/php
+      args:
+        ADD_ALIASES: ${ADD_ALIASES}
+        INSTALL_XDEBUG: ${INSTALL_XDEBUG}
+        PHP_VER_FPM: ${PHP_VER_FPM}
+    container_name: ${PHP_CONTAINER_NAME}
+    restart: unless-stopped
+    volumes:
+      - ./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ${APP_PATH}:/var/www/html
+    networks:
+      - this-net
+#      - mysql57
+#      - mysql8
+      - mailer
+
+  # Node.js
+  node:
+    image: node:13-alpine
+    container_name: ${NODE_CONTAINER_NAME}
+    restart: unless-stopped
+    volumes:
+      - ${APP_PATH}:/var/www/html
+    working_dir: /var/www/html
+    tty: true
+    networks:
+      - this-net
+
+# Networks
+networks:
+  this-net:
+    name: this-net
+#  mysql57:
+#    name: mysql57
+#  mysql8:
+#    name: mysql8
+  proxy:
+    name: proxy
+  mailer:
+    name: mailer
