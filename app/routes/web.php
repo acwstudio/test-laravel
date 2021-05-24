@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\AppAPI\Controllers\Admin\APIAdminLoginController;
+use App\Http\AppAPI\Controllers\Admin\APIAdminRegisterController;
+use App\Http\AppAPI\Controllers\Admin\APIAdminIndexController;
+use App\Http\AppReg\Controllers\Admin\RegAdminRegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/admin/register', [RegAdminRegisterController::class, 'showRegistrationForm'])->name('admin.register.show');
+Route::post('/admin/register', [RegAdminRegisterController::class, 'register'])->name('admin.register.create');
+
+Route::get('/admin', [APIAdminIndexController::class, 'index'])->name('admin.index');
+
+Route::get('/admin/login', [APIAdminLoginController::class, 'showLoginForm'])->name('admin.login.show');

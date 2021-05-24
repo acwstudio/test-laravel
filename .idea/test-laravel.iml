@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/app/domain" isTestSource="false" packagePrefix="Domain\" />
+      <sourceFolder url="file://$MODULE_DIR$/app/support" isTestSource="false" packagePrefix="Support\" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/graham-campbell/result-type" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpdocumentor/type-resolver" />
@@ -125,6 +126,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/barryvdh/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/barryvdh/laravel-ide-helper" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/react/promise" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/ui" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/sanctum" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
