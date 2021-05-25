@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a33da31-5900-46e3-8677-0e16da3ce6ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test-laravel.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminTokensRelatedController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Token/APITokenIndexController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Admin/AdminIdentifierResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_ide_helper_models.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper_models.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Admin/Controllers/AdminRegisterController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Admins/Models/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminIndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,17 +164,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm" value="Docker Compose" />
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm" value="Docker Compose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker/docker-compose.yml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/app/Http/Controllers" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/app/domain/Customers/Models" />
       <recent name="$PROJECT_DIR$/app/app/Http/AppReg/Controllers" />
       <recent name="$PROJECT_DIR$/app/resources/views/admin" />
       <recent name="$PROJECT_DIR$/app/resources/views" />
-      <recent name="$PROJECT_DIR$/docker" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/resources/views/admin" />
@@ -218,7 +201,9 @@
       <workItem from="1621810613640" duration="259000" />
       <workItem from="1621830448756" duration="1380000" />
       <workItem from="1621831846228" duration="1330000" />
-      <workItem from="1621838623435" duration="20282000" />
+      <workItem from="1621838623435" duration="20507000" />
+      <workItem from="1621944029195" duration="8839000" />
+      <workItem from="1621960976926" duration="8133000" />
     </task>
     <servers />
   </component>
