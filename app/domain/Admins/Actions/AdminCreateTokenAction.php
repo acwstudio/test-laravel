@@ -15,6 +15,6 @@ class AdminCreateTokenAction
     {
         $admin = Admin::where('email', $email)->first();
 
-        return $admin->createToken('apiToken')->plainTextToken;
+        return $admin->createToken('admin_token')->plainTextToken;
     }
 }

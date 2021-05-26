@@ -9,12 +9,15 @@ use Domain\Admins\Models\Admin;
 class APIAdminTokensRelatedController extends Controller
 {
     /**
+     * Get related resource
+     *
      * @param $id
-     * @return TokenCollection|Admin
+     * @return TokenCollection
      */
-    public function index($id): Admin|TokenCollection
+    public function index($id): TokenCollection
     {
         $admin = Admin::findOrFail($id);
+
         return new TokenCollection($admin->tokens);
     }
 }

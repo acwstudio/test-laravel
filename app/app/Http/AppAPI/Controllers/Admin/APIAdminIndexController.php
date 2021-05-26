@@ -20,7 +20,11 @@ class APIAdminIndexController extends Controller
         return new AdminCollection($admins);
     }
 
-    public function show($id)
+    /**
+     * @param $id
+     * @return AdminResource
+     */
+    public function show($id): AdminResource
     {
         $admin = Admin::with('tokens')->findOrFail($id);
 

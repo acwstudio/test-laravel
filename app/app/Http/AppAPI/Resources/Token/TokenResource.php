@@ -2,6 +2,8 @@
 
 namespace App\Http\AppAPI\Resources\Token;
 
+use App\Http\AppAPI\Resources\Admin\AdminIdentifierResource;
+use App\Http\AppAPI\Resources\Customer\CustomerIdentifierResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class TokenResource extends JsonResource
@@ -27,13 +29,28 @@ class TokenResource extends JsonResource
                 'updated_at' => $this->updated_at,
             ],
             'relationships' => [
-                'admins' => [
+                'tokenable' => [
                     'links' => [
-
+                        'self' => '',
+                        'related' => '',
                     ],
-                    'data' => ''
-                ]
+                    'data' => $this->typeResource()
+                ],
             ]
         ];
+    }
+
+    /**
+     * @return CustomerIdentifierResource|AdminIdentifierResource|string
+     */
+    private function typeResource(): CustomerIdentifierResource|AdminIdentifierResource|string
+    {
+        if ($this->name === 'admin_token') {
+            return new AdminIdentifierResource($this->whenLoaded('tokenable'));
+        } elseif ($this->name === 'customer_token') {
+            return new CustomerIdentifierResource($this->whenLoaded('tokenable'));
+        }
+
+        return 'There is no resource';
     }
 }

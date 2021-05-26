@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\AppAPI\Resources\Admin;
+namespace App\Http\AppAPI\Resources\Customer;
 
 use App\Http\AppAPI\Resources\Token\TokenIdentifierResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AdminResource extends JsonResource
+class CustomerResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -13,11 +13,11 @@ class AdminResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
-    public function toArray($request)
+    public function toArray($request): array
     {
         return [
             'id' => $this->id,
-            'type' => 'admins',
+            'type' => 'customers',
             'attributes' => [
                 'name' => $this->name,
                 'email' => $this->email,
@@ -27,8 +27,8 @@ class AdminResource extends JsonResource
             'relationships' => [
                 'tokens' => [
                     'links' => [
-                        'self' => route('api.admins.relationships.tokens', ['id' => $this->id]),
-                        'related' => route('api.admins.tokens', ['id' => $this->id])
+//                        'self' => route('api.admin.relationships.tokens', ['id' => $this->id]),
+//                        'related' => route('api.admin.tokens', ['id' => $this->id])
                     ],
                     'data' => TokenIdentifierResource::collection($this->whenLoaded('tokens'))
                 ],
