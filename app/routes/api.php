@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\AppAPI\Controllers\Admin\APIAdminIndexController;
+use App\Http\AppAPI\Controllers\Admin\APIAdminLoginController;
 use App\Http\AppAPI\Controllers\Admin\APIAdminRegisterController;
 use App\Http\AppAPI\Controllers\Admin\APIAdminTokensRelatedController;
 use App\Http\AppAPI\Controllers\Admin\APIAdminTokensRelationshipsController;
 use App\Http\AppAPI\Controllers\Customer\APICustomerIndexController;
+use App\Http\AppAPI\Controllers\Customer\APICustomerLoginController;
 use App\Http\AppAPI\Controllers\Customer\APICustomerTokensRelatedController;
 use App\Http\AppAPI\Controllers\Customer\APICustomerTokensRelationshipsController;
 use App\Http\AppAPI\Controllers\Token\APITokenIndexController;
@@ -31,8 +33,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::prefix('v1')->group(function () {
     Route::middleware('guest')->group(function () {
+
         Route::post('/admins/register', [APIAdminRegisterController::class, 'register'])->name('api.admin.register');
+        Route::post('/admins/login', [APIAdminLoginController::class, 'login'])->name('api.admin.login');
+
         Route::post('/customers/register', [APICustomerRegisterController::class, 'register'])->name('api.customer.register');
+        Route::post('/customers/login', [APICustomerLoginController::class, 'login'])->name('api.customer.login');
     });
 
     Route::middleware('auth:sanctum')->group(function () {
@@ -40,6 +46,7 @@ Route::prefix('v1')->group(function () {
         /*****************  ADMINS ROUTES **************/
         Route::get('/admins', [APIAdminIndexController::class, 'index'])->name('api.admins.index');
         Route::get('/admins/{id}', [APIAdminIndexController::class, 'show'])->name('api.admins.show');
+        Route::post('/admins/logout', [APIAdminLoginController::class, 'logout'])->name('api.admins.logout');
         // relations admin tokens
         Route::get('/admins/{id}/tokens', [
             APIAdminTokensRelatedController::class, 'index'
@@ -51,6 +58,7 @@ Route::prefix('v1')->group(function () {
         /*****************  CUSTOMERS ROUTES **************/
         Route::get('/customers', [APICustomerIndexController::class, 'index'])->name('api.customers.index');
         Route::get('/customers/{id}', [APICustomerIndexController::class, 'show'])->name('api.customers.show');
+        Route::post('/customers/logout', [APICustomerLoginController::class, 'logout'])->name('api.customers.logout');
         // relations customer tokens
         Route::get('/customers/{id}/tokens', [
             APICustomerTokensRelatedController::class, 'index'

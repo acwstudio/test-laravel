@@ -5,20 +5,19 @@ namespace Domain\Admins\Actions;
 
 use Domain\Admins\Models\Admin;
 use Hash;
-use Illuminate\Http\Request;
 
 class AdminCreateAction
 {
     /**
-     * @param Request $request
+     * @param array $request
      * @return Admin
      */
-    public function execute(Request $request): Admin
+    public function execute(array $request): Admin
     {
         return Admin::create([
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'password' => Hash::make($request->get('password')),
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
         ]);
     }
 }

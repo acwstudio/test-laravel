@@ -2,17 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a33da31-5900-46e3-8677-0e16da3ce6ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/app/Console/Commands/Support/APIControllerMake.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_ide_helper_models.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper_models.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminIndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Console/Commands/ApiControllerMake.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminTokensRelatedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminTokensRelatedController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Token/APITokenIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Token/APITokenIndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Admin/AdminResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Admin/AdminResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminRegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerLoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerRegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/AdminRegisterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/AdminRegisterRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Customer/CustomerRegisterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Customer/CustomerRegisterRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Customer/CustomerResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Customer/CustomerResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Token/TokenResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Token/TokenResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppReg/Controllers/Admin/RegAdminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppReg/Controllers/Admin/RegAdminLoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminCreateAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminCreateAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminCreateTokenAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminCreateTokenAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Customers/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Customers/Models/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminLoginAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminLoginAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Admins/Models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerCreateAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerCreateAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerCreateTokenAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerCreateTokenAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +220,10 @@
       <workItem from="1621838623435" duration="20507000" />
       <workItem from="1621944029195" duration="8839000" />
       <workItem from="1621960976926" duration="17824000" />
-      <workItem from="1622012310099" duration="11352000" />
+      <workItem from="1622012310099" duration="14117000" />
+      <workItem from="1622043901279" duration="11629000" />
+      <workItem from="1622100224569" duration="10346000" />
+      <workItem from="1622130117425" duration="17162000" />
     </task>
     <servers />
   </component>

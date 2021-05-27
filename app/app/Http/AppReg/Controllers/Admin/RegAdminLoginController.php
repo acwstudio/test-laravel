@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class RegAdminLoginController extends Controller
 {
-    //
+    public function showLoginForm()
+    {
+        return 'login form';
+    }
 }

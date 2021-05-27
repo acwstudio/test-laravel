@@ -51,23 +51,23 @@ return [
             'provider' => 'customers',
         ],
 
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-            'hash' => false,
-        ],
-
-        'api-admin' => [
-            'driver' => 'token',
-            'provider' => 'admins',
-            'hash' => false,
-        ],
-
-        'api-customer' => [
-            'driver' => 'token',
-            'provider' => 'customers',
-            'hash' => false,
-        ],
+//        'api' => [
+//            'driver' => 'token',
+//            'provider' => 'users',
+//            'hash' => false,
+//        ],
+//
+//        'api-admin' => [
+//            'driver' => 'token',
+//            'provider' => 'admins',
+//            'hash' => false,
+//        ],
+//
+//        'api-customer' => [
+//            'driver' => 'token',
+//            'provider' => 'customers',
+//            'hash' => false,
+//        ],
     ],
 
     /*

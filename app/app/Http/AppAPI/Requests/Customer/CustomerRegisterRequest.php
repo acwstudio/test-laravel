@@ -3,6 +3,7 @@
 namespace App\Http\AppAPI\Requests\Customer;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CustomerRegisterRequest extends FormRequest
 {
@@ -24,9 +25,22 @@ class CustomerRegisterRequest extends FormRequest
     public function rules()
     {
         return [
+            'client' => 'required|string|in:mobile,postman,spa,server',
             'name' => 'required|string',
             'email' => 'required|string|email|max:255|unique:customers',
             'password' => 'required|string|min:8|confirmed',
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'client.in' => 'The :attribute must be one of these items: mobile, postman, spa, server',
         ];
     }
 }

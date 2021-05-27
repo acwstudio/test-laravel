@@ -6,9 +6,6 @@ use App\Http\AppAPI\Controllers\Controller;
 use App\Http\AppAPI\Requests\Admin\AdminRegisterRequest;
 use Domain\Admins\Actions\AdminCreateAction;
 use Domain\Admins\Actions\AdminCreateTokenAction;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 
 class APIAdminRegisterController extends Controller
@@ -40,10 +37,11 @@ class APIAdminRegisterController extends Controller
      */
     public function register(AdminRegisterRequest $request): JsonResponse
     {
-        $admin = $this->adminCreateAction->execute($request);
-        $token = $this->adminCreateTokenAction->execute($admin->email);
+        $admin = $this->adminCreateAction->execute($request->all());
+        $token = $this->adminCreateTokenAction->execute($request->all());
 
         return response()->json([
+            'admin' => $admin,
             'access_token' => $token,
             'type_token' => 'Bearer'
         ]);

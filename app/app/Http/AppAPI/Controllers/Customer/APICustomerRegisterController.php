@@ -25,10 +25,11 @@ class APICustomerRegisterController extends Controller
 
     public function register(CustomerRegisterRequest $request)
     {
-        $customer = $this->customerCreateAction->execute($request);
-        $token = $this->customerCreateTokenAction->execute($customer->email);
+        $customer = $this->customerCreateAction->execute($request->all());
+        $token = $this->customerCreateTokenAction->execute($request->all());
 
         return response()->json([
+            'customer' => $customer,
             'access_token' => $token,
             'type_token' => 'Bearer'
         ]);

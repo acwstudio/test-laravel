@@ -27,8 +27,8 @@ class CustomerResource extends JsonResource
             'relationships' => [
                 'tokens' => [
                     'links' => [
-//                        'self' => route('api.admin.relationships.tokens', ['id' => $this->id]),
-//                        'related' => route('api.admin.tokens', ['id' => $this->id])
+                        'self' => route('api.customers.relationships.tokens', ['id' => $this->id]),
+                        'related' => route('api.customers.tokens', ['id' => $this->id])
                     ],
                     'data' => TokenIdentifierResource::collection($this->whenLoaded('tokens'))
                 ],

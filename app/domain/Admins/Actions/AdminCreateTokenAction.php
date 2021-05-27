@@ -11,10 +11,10 @@ class AdminCreateTokenAction
      * @param string $email
      * @return string
      */
-    public function execute(string $email): string
+    public function execute(array $request): string
     {
-        $admin = Admin::where('email', $email)->first();
+        $admin = Admin::where('email', $request['email'])->first();
 
-        return $admin->createToken('admin_token')->plainTextToken;
+        return $admin->createToken($request['client'], ['admin'])->plainTextToken;
     }
 }

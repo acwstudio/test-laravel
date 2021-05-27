@@ -31,8 +31,8 @@ class TokenResource extends JsonResource
             'relationships' => [
                 'tokenable' => [
                     'links' => [
-                        'self' => '',
-                        'related' => '',
+                        'self' => route('api.tokens.relationships.tokenable', ['id' => $this->id]),
+                        'related' => route('api.tokens.tokenable', ['id' => $this->id]),
                     ],
                     'data' => $this->typeResource()
                 ],

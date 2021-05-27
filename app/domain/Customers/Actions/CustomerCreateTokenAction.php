@@ -8,13 +8,13 @@ use Domain\Customers\Models\Customer;
 class CustomerCreateTokenAction
 {
     /**
-     * @param string $email
+     * @param array $request
      * @return string
      */
-    public function execute(string $email): string
+    public function execute(array $request): string
     {
-        $customer = Customer::where('email', $email)->first();
+        $customer = Customer::where('email', $request['email'])->first();
 
-        return $customer->createToken('customer_token')->plainTextToken;
+        return $customer->createToken($request['client'], ['customer'])->plainTextToken;
     }
 }

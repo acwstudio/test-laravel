@@ -2,7 +2,7 @@
 
 namespace App\Console;
 
-use App\Console\Commands\ApiControllerMake;
+use App\Console\Commands\Support\APIControllerMake;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        ApiControllerMake::class
+        APIControllerMake::class
     ];
 
     /**
