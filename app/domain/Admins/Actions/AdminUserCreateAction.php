@@ -6,7 +6,7 @@ namespace Domain\Admins\Actions;
 use Domain\Admins\Models\Admin;
 use Hash;
 
-class AdminCreateAction
+class AdminUserCreateAction
 {
     /**
      * @param array $request

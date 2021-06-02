@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\AppAPI\Controllers\Admin\APIAdminLoginController;
-use App\Http\AppAPI\Controllers\Admin\APIAdminRegisterController;
-use App\Http\AppAPI\Controllers\Admin\APIAdminIndexController;
+use App\Http\AppAPI\Controllers\Admin\Auth\APIAdminUserLoginController;
+use App\Http\AppAPI\Controllers\Admin\Auth\APIAdminUserRegisterController;
+use App\Http\AppAPI\Controllers\Admin\CRUD\APIAdminUserIndexController;
 use App\Http\AppReg\Controllers\Admin\RegAdminLoginController;
 use App\Http\AppReg\Controllers\Admin\RegAdminRegisterController;
 use Illuminate\Support\Facades\Route;
@@ -22,10 +22,10 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/admin/register', [RegAdminRegisterController::class, 'showRegistrationForm'])->name('admin.register.show');
-Route::post('/admin/register', [RegAdminRegisterController::class, 'register'])->name('admin.register.create');
+//Route::get('/admin/register', [RegAdminRegisterController::class, 'showRegistrationForm'])->name('admin.register.show');
+//Route::post('/admin/register', [RegAdminRegisterController::class, 'register'])->name('admin.register.create');
+//
+//Route::get('/admin', [APIAdminUserIndexController::class, 'index'])->name('admin.index');
 
-Route::get('/admin', [APIAdminIndexController::class, 'index'])->name('admin.index');
-
-Route::get('/admin/login', [RegAdminLoginController::class, 'showLoginForm'])->name('admin.login.show');
-//Route::get('/admin/login', [APIAdminLoginController::class, 'login'])->name('admin.login');
+//Route::get('/admin/login', [RegAdminLoginController::class, 'showLoginForm'])->name('admin.login.show');
+//Route::get('/admin/login', [APIAdminUserLoginController::class, 'login'])->name('admin.login');

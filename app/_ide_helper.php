@@ -16937,6 +16937,19 @@ namespace  {
             }
              
                 /**
+             * 
+             *
+             * @see \Spatie\JsonApiPaginate\JsonApiPaginateServiceProvider::registerMacro()
+             * @param int|null $maxResults
+             * @param int|null $defaultSize
+             * @static 
+             */ 
+            public static function jsonPaginate($maxResults = null, $defaultSize = null)
+            {
+                                return \Illuminate\Database\Eloquent\Builder::jsonPaginate($maxResults, $defaultSize);
+            }
+             
+                /**
              * Set the columns to be selected.
              *
              * @param array|mixed $columns

@@ -128,6 +128,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/react/promise" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/ui" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/spatie/laravel-query-builder" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/spatie/laravel-json-api-paginate" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

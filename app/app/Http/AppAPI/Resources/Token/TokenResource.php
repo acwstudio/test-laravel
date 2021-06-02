@@ -31,8 +31,8 @@ class TokenResource extends JsonResource
             'relationships' => [
                 'tokenable' => [
                     'links' => [
-                        'self' => route('api.tokens.relationships.tokenable', ['id' => $this->id]),
-                        'related' => route('api.tokens.tokenable', ['id' => $this->id]),
+                        'self' => route('api.admins.tokens.relationships.tokenable', ['id' => $this->id]),
+                        'related' => route('api.admins.tokens.tokenable', ['id' => $this->id]),
                     ],
                     'data' => $this->typeResource()
                 ],
@@ -45,9 +45,9 @@ class TokenResource extends JsonResource
      */
     private function typeResource(): CustomerIdentifierResource|AdminIdentifierResource|string
     {
-        if ($this->name === 'admin_token') {
+        if ($this->tokenable_type === 'Domain\Admins\Models\Admin') {
             return new AdminIdentifierResource($this->whenLoaded('tokenable'));
-        } elseif ($this->name === 'customer_token') {
+        } elseif ($this->tokenable_type === 'Domain\Customers\Models\Customer') {
             return new CustomerIdentifierResource($this->whenLoaded('tokenable'));
         }
 

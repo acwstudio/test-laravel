@@ -47,4 +47,25 @@ return [
         'encrypt_cookies' => App\Http\Middleware\EncryptCookies::class,
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Abilities, Names
+    |--------------------------------------------------------------------------
+    |
+    | When handling an incoming request authenticated by Sanctum, you may determine
+    | if the token has a given ability using the tokenCan method
+    |
+    */
+
+    'abilities' => [
+        'employers' => ['employer','admin'],
+        'applicants' => ['applicant','admin'],
+        'admins' => ['admin']
+    ],
+
+    'names' => [
+        'spa' => 'SPA',
+        'mobile' => 'Mobile',
+        'service' => 'Service'
+    ]
 ];

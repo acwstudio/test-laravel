@@ -81,6 +81,37 @@ namespace Domain\Admins\Models{
 	class Admin extends \Eloquent {}
 }
 
+namespace Domain\Applicants\Models{
+/**
+ * Domain\Applicants\Models\Applicant
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property string $password
+ * @property int $banned
+ * @property string|null $remember_token
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @property-read int|null $notifications_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Sanctum\PersonalAccessToken[] $tokens
+ * @property-read int|null $tokens_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereBanned($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereUpdatedAt($value)
+ */
+	class Applicant extends \Eloquent {}
+}
+
 namespace Domain\Customers\Models{
 /**
  * Domain\Customers\Models\Customer
@@ -108,5 +139,36 @@ namespace Domain\Customers\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Customer whereUpdatedAt($value)
  */
 	class Customer extends \Eloquent {}
+}
+
+namespace Domain\Employers\Models{
+/**
+ * Domain\Employers\Models\Employer
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property string $password
+ * @property int $banned
+ * @property string|null $remember_token
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @property-read int|null $notifications_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Sanctum\PersonalAccessToken[] $tokens
+ * @property-read int|null $tokens_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer whereBanned($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Employer whereUpdatedAt($value)
+ */
+	class Employer extends \Eloquent {}
 }
 

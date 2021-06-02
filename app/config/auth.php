@@ -51,23 +51,23 @@ return [
             'provider' => 'customers',
         ],
 
-//        'api' => [
-//            'driver' => 'token',
-//            'provider' => 'users',
-//            'hash' => false,
-//        ],
-//
-//        'api-admin' => [
-//            'driver' => 'token',
-//            'provider' => 'admins',
-//            'hash' => false,
-//        ],
-//
-//        'api-customer' => [
-//            'driver' => 'token',
-//            'provider' => 'customers',
-//            'hash' => false,
-//        ],
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+
+        'api-admin' => [
+            'driver' => 'sanctum',
+            'provider' => 'admins',
+            'hash' => false,
+        ],
+
+        'api-employer' => [
+            'driver' => 'sanctum',
+            'provider' => 'employers',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -98,9 +98,9 @@ return [
             'model' => Domain\Admins\Models\Admin::class,
         ],
 
-        'customers' => [
+        'employers' => [
             'driver' => 'eloquent',
-            'model' => Domain\Customers\Models\Customer::class,
+            'model' => Domain\Employers\Models\Employer::class,
         ],
 
         // 'users' => [
@@ -139,8 +139,8 @@ return [
             'throttle' => 60,
         ],
 
-        'customers' => [
-            'provider' => 'customers',
+        'employers' => [
+            'provider' => 'employers',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\AppAPI\Controllers\Admin;
+namespace App\Http\AppAPI\Controllers\Admin\Relationships;
 
 use App\Http\AppAPI\Controllers\Controller;
 use App\Http\AppAPI\Resources\Token\TokenIdentifierResource;
 use Domain\Admins\Models\Admin;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
-class APIAdminTokensRelationshipsController extends Controller
+class APIAdminUserTokensRelationshipsController extends Controller
 {
     /**
      * @param $id

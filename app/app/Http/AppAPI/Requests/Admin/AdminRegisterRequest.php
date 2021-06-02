@@ -24,10 +24,14 @@ class AdminRegisterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'client' => 'required|string|in:mobile,postman,spa,server',
-            'name' => 'required|string',
-            'email' => 'required|string|email|max:255|unique:admins',
-            'password' => 'required|string|min:8|confirmed',
+            'meta' => 'present|array',
+            'meta.client' => 'required|string|in:mobile,spa,service',
+            'data' => 'required|array',
+            'data.type' => 'required|in:articles',
+            'data.attributes' => 'required|array',
+            'data.attributes.name' => 'required|string',
+            'data.attributes.email' => 'required|string|email|max:255|unique:admins',
+            'data.attributes.password' => 'required|string|min:8|confirmed',
         ];
     }
 
@@ -36,7 +40,7 @@ class AdminRegisterRequest extends FormRequest
      *
      * @return array
      */
-    public function messages()
+    public function messages(): array
     {
         return [
             'client.in' => 'The :attribute must be one of these items: mobile, postman, spa, server',

@@ -120,6 +120,8 @@
       <path value="$PROJECT_DIR$/app/vendor/react/promise" />
       <path value="$PROJECT_DIR$/app/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/app/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/app/vendor/spatie/laravel-query-builder" />
+      <path value="$PROJECT_DIR$/app/vendor/spatie/laravel-json-api-paginate" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

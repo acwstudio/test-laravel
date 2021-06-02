@@ -1,31 +1,31 @@
 <?php
 
-namespace App\Http\AppAPI\Controllers\Admin;
+namespace App\Http\AppAPI\Controllers\Admin\Auth;
 
 use App\Http\AppAPI\Controllers\Controller;
 use App\Http\AppAPI\Requests\Admin\AdminRegisterRequest;
-use Domain\Admins\Actions\AdminCreateAction;
-use Domain\Admins\Actions\AdminCreateTokenAction;
+use Domain\Admins\Actions\AdminUserCreateAction;
+use Domain\Admins\Actions\AdminUserCreateTokenAction;
 use Illuminate\Http\JsonResponse;
 
-class APIAdminRegisterController extends Controller
+class APIAdminUserRegisterController extends Controller
 {
     /**
-     * @var AdminCreateAction
+     * @var AdminUserCreateAction
      */
-    public AdminCreateAction $adminCreateAction;
+    public AdminUserCreateAction $adminCreateAction;
 
     /**
-     * @var AdminCreateTokenAction
+     * @var AdminUserCreateTokenAction
      */
-    public AdminCreateTokenAction $adminCreateTokenAction;
+    public AdminUserCreateTokenAction $adminCreateTokenAction;
 
     /**
-     * APIAdminRegisterController constructor.
-     * @param AdminCreateAction $adminCreateAction
-     * @param AdminCreateTokenAction $adminCreateTokenAction
+     * APIAdminUserRegisterController constructor.
+     * @param AdminUserCreateAction $adminCreateAction
+     * @param AdminUserCreateTokenAction $adminCreateTokenAction
      */
-    public function __construct(AdminCreateAction $adminCreateAction, AdminCreateTokenAction $adminCreateTokenAction)
+    public function __construct(AdminUserCreateAction $adminCreateAction, AdminUserCreateTokenAction $adminCreateTokenAction)
     {
         $this->adminCreateAction = $adminCreateAction;
         $this->adminCreateTokenAction = $adminCreateTokenAction;

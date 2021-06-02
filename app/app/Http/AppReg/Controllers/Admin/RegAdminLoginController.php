@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class RegAdminLoginController extends Controller
 {
-    public function showLoginForm()
+    public function showLoginForm(Request $request)
     {
-        return 'login form';
+        return $request->header('User-Agent');
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\AppAPI\Controllers\Admin;
+namespace App\Http\AppAPI\Controllers\Admin\Relationships;
 
 use App\Http\AppAPI\Controllers\Controller;
 use App\Http\AppAPI\Resources\Token\TokenCollection;
 use Domain\Admins\Models\Admin;
 
-class APIAdminTokensRelatedController extends Controller
+class APIAdminUserTokensRelatedController extends Controller
 {
     /**
      * Get related resource

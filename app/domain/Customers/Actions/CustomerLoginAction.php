@@ -29,7 +29,7 @@ class CustomerLoginAction
         if (!$customer->tokens()->where('name', $request['client'])) {
             return response()->json([
                 'message' => $customer->email . ' doesn\'t have token',
-                'new token' => $customer->createToken($request['client'])->plainTextToken
+                'new token' => $customer->createToken($request['client'], ['customer'])->plainTextToken
             ], 401);
         }
 

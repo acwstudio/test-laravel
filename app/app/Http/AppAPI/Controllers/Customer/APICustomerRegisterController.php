@@ -6,6 +6,7 @@ use App\Http\AppAPI\Controllers\Controller;
 use App\Http\AppAPI\Requests\Customer\CustomerRegisterRequest;
 use Domain\Customers\Actions\CustomerCreateAction;
 use Domain\Customers\Actions\CustomerCreateTokenAction;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class APICustomerRegisterController extends Controller
@@ -23,7 +24,11 @@ class APICustomerRegisterController extends Controller
         $this->customerCreateTokenAction = $customerCreateTokenAction;
     }
 
-    public function register(CustomerRegisterRequest $request)
+    /**
+     * @param CustomerRegisterRequest $request
+     * @return JsonResponse
+     */
+    public function register(CustomerRegisterRequest $request): JsonResponse
     {
         $customer = $this->customerCreateAction->execute($request->all());
         $token = $this->customerCreateTokenAction->execute($request->all());

@@ -27,8 +27,8 @@ class AdminResource extends JsonResource
             'relationships' => [
                 'tokens' => [
                     'links' => [
-                        'self' => route('api.admins.relationships.tokens', ['id' => $this->id]),
-                        'related' => route('api.admins.tokens', ['id' => $this->id])
+                        'self' => route('api.admins.user.relationships.tokens', ['id' => $this->id]),
+                        'related' => route('api.admins.user.tokens', ['id' => $this->id])
                     ],
                     'data' => TokenIdentifierResource::collection($this->whenLoaded('tokens'))
                 ],
