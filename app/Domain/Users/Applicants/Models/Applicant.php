@@ -1,14 +1,14 @@
 <?php
 
-namespace Domain\Employers\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+namespace Domain\Users\Applicants\Models;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Employer extends Authenticatable
+class Applicant extends Authenticatable
 {
     use HasFactory, Notifiable, HasApiTokens;
 
@@ -32,15 +32,4 @@ class Employer extends Authenticatable
         'password',
         'remember_token',
     ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
-
 }

@@ -4,7 +4,7 @@ namespace App\Http\AppAPI\Controllers\Admin\Auth;
 
 use App\Http\AppAPI\Controllers\Controller;
 use App\Http\AppAPI\Requests\Admin\AdminRegisterRequest;
-use Domain\Admins\Actions\AdminUserCreateAction;
+use Domain\Users\Admins\Actions\AdminUserCreateAction;
 use Domain\Admins\Actions\AdminUserCreateTokenAction;
 use Illuminate\Http\JsonResponse;
 

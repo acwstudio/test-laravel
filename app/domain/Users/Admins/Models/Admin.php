@@ -1,6 +1,7 @@
 <?php
 
-namespace Domain\Admins\Models;
+
+namespace Domain\Users\Admins\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -10,11 +11,6 @@ use Laravel\Sanctum\HasApiTokens;
 class Admin extends Authenticatable
 {
     use HasFactory, Notifiable, HasApiTokens;
-
-    /**
-     * @var string
-     */
-    protected $guard = 'api-admin';
 
     /**
      * The attributes that are mass assignable.

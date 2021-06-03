@@ -3,7 +3,7 @@
 namespace App\Http\AppAPI\Middleware;
 
 use Closure;
-use Domain\Admins\Models\Admin;
+use Domain\Users\Admins\Models\Admin;
 use Illuminate\Http\Request;
 
 class APIAdminMiddleware
@@ -17,7 +17,7 @@ class APIAdminMiddleware
      */
     public function handle(Request $request, Closure $next): mixed
     {
-        /** @var Admin $admin */
+        /** @var \Domain\Users\Admins\Models\Admin $admin */
         $admin = auth()->user();
 
         if ($admin->tokenCan('admin')) {

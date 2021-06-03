@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Domain\Admins\Actions;
+namespace Domain\Users\Admins\Actions;
 
-use Domain\Admins\Models\Admin;
+use Domain\Users\Admins\Models\Admin;
 use Hash;
 use Illuminate\Validation\ValidationException;
 
@@ -11,7 +11,7 @@ class AdminUserLoginAction
 {
     /**
      * @param array $request
-     * @return array|string
+     * @return array
      * @throws ValidationException
      */
     public function execute(array $request): array

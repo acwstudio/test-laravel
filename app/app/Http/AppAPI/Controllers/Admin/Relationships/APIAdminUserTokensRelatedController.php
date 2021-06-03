@@ -4,7 +4,7 @@ namespace App\Http\AppAPI\Controllers\Admin\Relationships;
 
 use App\Http\AppAPI\Controllers\Controller;
 use App\Http\AppAPI\Resources\Token\TokenCollection;
-use Domain\Admins\Models\Admin;
+use Domain\Users\Admins\Models\Admin;
 
 class APIAdminUserTokensRelatedController extends Controller
 {

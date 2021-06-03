@@ -3,39 +3,40 @@
 namespace App\Http\AppAPI\Controllers\Admin\CRUD;
 
 use App\Http\AppAPI\Controllers\Controller;
-use App\Http\AppAPI\Requests\Admin\AdminCreateRequest;
-use Domain\Admins\Actions\AdminUserCreateAction;
+use App\Http\AppAPI\Requests\Admin\APIAdminUserCreateRequest;
+use App\Http\AppAPI\Resources\Admin\AdminResource;
+use Domain\Users\Admins\Actions\AdminUserCreateAction;
 use Illuminate\Http\JsonResponse;
-use function response;
 
 class APIAdminUserStoreController extends Controller
 {
     /**
-     * @var AdminUserCreateAction
+     * @var \Domain\Users\Admins\Actions\AdminUserCreateAction
      */
-    public AdminUserCreateAction $adminCreateAction;
+    public AdminUserCreateAction $adminUserCreateAction;
 
     /**
      * APIAdminUserStoreController constructor.
-     * @param AdminUserCreateAction $adminCreateAction
+     * @param \Domain\Users\Admins\Actions\AdminUserCreateAction $adminCreateAction
      */
-    public function __construct(AdminUserCreateAction $adminCreateAction)
+    public function __construct(AdminUserCreateAction $adminUserCreateAction)
     {
-        $this->adminCreateAction = $adminCreateAction;
+        $this->adminCreateAction = $adminUserCreateAction;
     }
 
     /**
-     * @param AdminCreateRequest $adminCreateRequest
+     * @param APIAdminUserCreateRequest $adminCreateRequest
      * @return JsonResponse
      */
-    public function store(AdminCreateRequest $adminCreateRequest): JsonResponse
+    public function store(APIAdminUserCreateRequest $adminUserCreateRequest): JsonResponse
     {
-        $dataAttributes = $adminCreateRequest->input('data.attributes');
+        $dataAttributes = $adminUserCreateRequest->input('data.attributes');
 
-        $admin = $this->adminCreateAction->execute($dataAttributes);
+        $admin = $this->adminUserCreateAction->execute($dataAttributes);
 
         return response()->json([
-            'admin' => $admin
+            new AdminResource($admin),
+            'password' => $dataAttributes['password']
         ]);
     }
 }

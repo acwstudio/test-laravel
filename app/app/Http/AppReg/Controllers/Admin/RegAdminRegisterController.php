@@ -4,7 +4,7 @@ namespace App\Http\AppReg\Controllers\Admin;
 
 use App\Http\AppAPI\Requests\Admin\AdminRegisterRequest;
 use App\Http\AppReg\Controllers\Controller;
-use Domain\Admins\Actions\AdminUserCreateAction;
+use Domain\Users\Admins\Actions\AdminUserCreateAction;
 use Domain\Admins\Actions\AdminSendEmailAction;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -13,7 +13,7 @@ use Illuminate\Contracts\View\View;
 class RegAdminRegisterController extends Controller
 {
     /**
-     * @var AdminUserCreateAction
+     * @var \Domain\Users\Admins\Actions\AdminUserCreateAction
      */
     public AdminUserCreateAction $adminCreateAction;
 
@@ -25,7 +25,7 @@ class RegAdminRegisterController extends Controller
     /**
      * RegAdminRegisterController constructor.
      *
-     * @param AdminUserCreateAction $adminCreateAction
+     * @param \Domain\Users\Admins\Actions\AdminUserCreateAction $adminCreateAction
      * @param AdminSendEmailAction $adminSendEmailAction
      */
     public function __construct(AdminUserCreateAction $adminCreateAction, AdminSendEmailAction $adminSendEmailAction)

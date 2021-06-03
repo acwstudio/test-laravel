@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Domain\Admins\Actions\AdminSendEmailAction;
-use Domain\Admins\Actions\AdminUserCreateAction;
+use Domain\Users\Admins\Actions\AdminUserCreateAction;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Validator;
 

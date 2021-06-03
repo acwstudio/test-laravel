@@ -2,43 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a33da31-5900-46e3-8677-0e16da3ce6ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminUserLoginAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminUserLogoutAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test-laravel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/.phpstorm.meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/app/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_ide_helper_models.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper_models.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserIndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserRegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminTokensRelatedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Relationships/APIAdminUserTokensRelatedController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/APIAdminTokensRelationshipsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Relationships/APIAdminUserTokensRelationshipsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerRegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/AdminLoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/AdminLoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/AdminRegisterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/AdminRegisterRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Customer/CustomerLoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Customer/CustomerLoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Admin/AdminResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Admin/AdminResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Token/TokenResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Token/TokenResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppReg/Controllers/Admin/RegAdminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppReg/Controllers/Admin/RegAdminLoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Console/Commands/AdminUserCreateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Commands/AdminUserCreateCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserLoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserLogoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserLogoutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserRegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserDestroyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserDestroyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserIndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserShowController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserShowController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserStoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserStoreController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserUpdateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserUpdateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Relationships/APIAdminUserTokensRelatedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Relationships/APIAdminUserTokensRelatedController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Relationships/APIAdminUserTokensRelationshipsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Relationships/APIAdminUserTokensRelationshipsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Middleware/APIAdminMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Middleware/APIAdminMiddleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/AdminCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/APIAdminUserCreateRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/AppReg/Controllers/Admin/RegAdminRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppReg/Controllers/Admin/RegAdminRegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/sanctum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminCreateAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminUserCreateAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminCreateTokenAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminUserCreateTokenAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminLoginAction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminLogoutAction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminSendEmailAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminSendEmailAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerLoginAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerLoginAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/admin-registered-email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/admin-registered-email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminUserCreateAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Users/Admins/Actions/AdminUserCreateAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminUserCreateTokenAction.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminUserLoginAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Users/Admins/Actions/AdminUserLoginAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Actions/AdminUserLogoutAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Users/Admins/Actions/AdminUserLogoutAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Admins/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Users/Admins/Models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Applicants/Models/Applicant.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Employers/Actions/EmployerCreateAction.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/domain/Employers/Models/Employer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/api-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api-admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,8 +190,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm" value="Docker Compose" />
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm" value="Docker Compose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/routes" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Domain/Users/Applicants/Models" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -250,6 +243,8 @@
       <workItem from="1622484151501" duration="7202000" />
       <workItem from="1622532623522" duration="37600000" />
       <workItem from="1622623313979" duration="2401000" />
+      <workItem from="1622669143373" duration="9511000" />
+      <workItem from="1622711056528" duration="19105000" />
     </task>
     <servers />
   </component>

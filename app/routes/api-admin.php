@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\AppAPI\Controllers\Admin\Auth\APIAdminUserRegisterController;
+use App\Http\AppAPI\Controllers\Admin\CRUD\APIAdminUserDestroyController;
+use App\Http\AppAPI\Controllers\Admin\CRUD\APIAdminUserShowController;
 use App\Http\AppAPI\Controllers\Admin\CRUD\APIAdminUserStoreController;
 use App\Http\AppAPI\Controllers\Admin\CRUD\APIAdminUserIndexController;
 use App\Http\AppAPI\Controllers\Admin\Auth\APIAdminUserLoginController;
@@ -30,10 +32,10 @@ Route::group(['prefix' => 'v1/admin', 'as' => 'api.admins.'], function () {
 
         // CRUD routes
         Route::get('/users', [APIAdminUserIndexController::class, 'index'])->name('users.index');
-        Route::get('/users/{id}', [APIAdminUserIndexController::class, 'show'])->name('users.show');
+        Route::get('/users/{id}', [APIAdminUserShowController::class, 'show'])->name('users.show');
         Route::post('/users', [APIAdminUserStoreController::class, 'store'])->name('users.store');
         Route::patch('/users/{id}', [APIAdminUserUpdateController::class, 'update'])->name('users.update');
-        Route::delete('/users/{id}', [APIAdminUserUpdateController::class, 'destroy'])->name('users.destroy');
+        Route::delete('/users/{id}', [APIAdminUserDestroyController::class, 'destroy'])->name('users.destroy');
 
         // Relationships routes
         Route::get('/users/{id}/tokens', [APIAdminUserTokensRelatedController::class, 'index'])

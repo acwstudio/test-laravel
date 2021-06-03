@@ -3,7 +3,7 @@
 namespace App\Http\AppAPI\Controllers\Admin\Auth;
 
 use App\Http\AppAPI\Controllers\Controller;
-use Domain\Admins\Actions\AdminUserLogoutAction;
+use Domain\Users\Admins\Actions\AdminUserLogoutAction;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 

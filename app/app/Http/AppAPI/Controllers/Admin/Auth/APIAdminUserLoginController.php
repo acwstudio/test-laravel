@@ -4,8 +4,8 @@ namespace App\Http\AppAPI\Controllers\Admin\Auth;
 
 use App\Http\AppAPI\Controllers\Controller;
 use App\Http\AppAPI\Requests\Admin\AdminLoginRequest;
-use Domain\Admins\Actions\AdminUserLoginAction;
-use Domain\Admins\Actions\AdminUserLogoutAction;
+use Domain\Users\Admins\Actions\AdminUserLoginAction;
+use Domain\Users\Admins\Actions\AdminUserLogoutAction;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
 
@@ -17,7 +17,7 @@ class APIAdminUserLoginController extends Controller
     public AdminUserLoginAction $adminLoginAction;
 
     /**
-     * @var AdminUserLogoutAction
+     * @var \Domain\Users\Admins\Actions\AdminUserLogoutAction
      */
     public AdminUserLogoutAction $adminLogoutAction;
 
