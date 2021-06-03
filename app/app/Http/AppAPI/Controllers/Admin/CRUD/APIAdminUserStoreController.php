@@ -11,21 +11,21 @@ use Illuminate\Http\JsonResponse;
 class APIAdminUserStoreController extends Controller
 {
     /**
-     * @var \Domain\Users\Admins\Actions\AdminUserCreateAction
+     * @var AdminUserCreateAction
      */
     public AdminUserCreateAction $adminUserCreateAction;
 
     /**
      * APIAdminUserStoreController constructor.
-     * @param \Domain\Users\Admins\Actions\AdminUserCreateAction $adminCreateAction
+     * @param AdminUserCreateAction $adminUserCreateAction
      */
     public function __construct(AdminUserCreateAction $adminUserCreateAction)
     {
-        $this->adminCreateAction = $adminUserCreateAction;
+        $this->adminUserCreateAction = $adminUserCreateAction;
     }
 
     /**
-     * @param APIAdminUserCreateRequest $adminCreateRequest
+     * @param APIAdminUserCreateRequest $adminUserCreateRequest
      * @return JsonResponse
      */
     public function store(APIAdminUserCreateRequest $adminUserCreateRequest): JsonResponse

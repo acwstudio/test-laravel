@@ -4,9 +4,10 @@ namespace App\Http\AppAPI\Middleware;
 
 use Closure;
 use Domain\Customers\Models\Customer;
+use Domain\Users\Employers\Models\Employer;
 use Illuminate\Http\Request;
 
-class APICustomerMiddleware
+class APIEmployerMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,10 +18,10 @@ class APICustomerMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        /** @var Customer $customer */
-        $customer = auth()->user();
+        /** @var Employer $employer */
+        $employer = auth()->user();
 
-        if ($customer->tokenCan('customer')) {
+        if ($employer->tokenCan('employer')) {
             return $next($request);
         }
 

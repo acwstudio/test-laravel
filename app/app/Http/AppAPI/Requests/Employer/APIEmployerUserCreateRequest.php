@@ -4,7 +4,7 @@ namespace App\Http\AppAPI\Requests\Employer;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class EmployerCreateRequest extends FormRequest
+class APIEmployerUserCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,10 +24,12 @@ class EmployerCreateRequest extends FormRequest
     public function rules()
     {
         return [
-//            'client' => 'required|string|in:mobile,postman,spa,server',
-            'name' => 'required|string',
-            'email' => 'required|string|email|max:255|unique:customers',
-            'password' => 'required|string|min:8|confirmed',
+            'data' => 'required|array',
+            'data.type' => 'required|in:employers',
+            'data.attributes' => 'required|array',
+            'data.attributes.name' => 'required|string',
+            'data.attributes.email' => 'required|string|email|max:255|unique:employers,email',
+            'data.attributes.password' => 'required|string|min:8|confirmed',
         ];
     }
 }

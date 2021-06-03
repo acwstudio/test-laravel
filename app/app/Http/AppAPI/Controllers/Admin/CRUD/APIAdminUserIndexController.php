@@ -14,7 +14,7 @@ class APIAdminUserIndexController extends Controller
      * @param Request $request
      * @return AdminCollection
      */
-    public function index(Request $request ): AdminCollection
+    public function index(Request $request): AdminCollection
     {
         $perPage = $request->get('per_page');
 

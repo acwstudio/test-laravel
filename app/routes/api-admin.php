@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\AppAPI\Controllers\Admin\Auth\APIAdminUserLogoutController;
 use App\Http\AppAPI\Controllers\Admin\Auth\APIAdminUserRegisterController;
 use App\Http\AppAPI\Controllers\Admin\CRUD\APIAdminUserDestroyController;
 use App\Http\AppAPI\Controllers\Admin\CRUD\APIAdminUserShowController;
@@ -23,7 +24,7 @@ Route::group(['prefix' => 'v1/admin', 'as' => 'api.admins.'], function () {
     });
     Route::group(['middleware' => ['auth:sanctum', 'api.admin']], function () {
         Route::post('/register', [APIAdminUserRegisterController::class, 'register'])->name('register');
-        Route::delete('/logout', [APIAdminUserLoginController::class, 'logout'])->name('logout');
+        Route::delete('/logout', [APIAdminUserLogoutController::class, 'logout'])->name('logout');
     });
 
     /*************** ADMINS ROUTES ****************/

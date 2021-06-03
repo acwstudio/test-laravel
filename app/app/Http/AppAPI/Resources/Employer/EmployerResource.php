@@ -32,7 +32,7 @@ class EmployerResource extends JsonResource
 //                        'self' => route('api.customers.relationships.tokens', ['id' => $this->id]),
 //                        'related' => route('api.customers.tokens', ['id' => $this->id])
                     ],
-                    'data' => TokenIdentifierResource::collection($this->whenLoaded('tokens'))
+//                    'data' => TokenIdentifierResource::collection($this->whenLoaded('tokens'))
                 ],
             ]
         ];
