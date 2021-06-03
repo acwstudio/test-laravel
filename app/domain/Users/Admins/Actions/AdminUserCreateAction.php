@@ -9,8 +9,8 @@ use Hash;
 class AdminUserCreateAction
 {
     /**
-     * @param array $request
-     * @return \Domain\Users\Admins\Models\Admin
+     * @param array $data
+     * @return Admin
      */
     public function execute(array $data): Admin
     {

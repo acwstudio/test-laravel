@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Domain\Admins\Actions;
+namespace Domain\Users\Actions;
 
 use Support\Mails\Admins\AdminRegisteredMail;
 
-class AdminSendEmailAction
+class UsersCreatedSendEmailAction
 {
     /**
      * @param string $email

@@ -3,7 +3,7 @@
 namespace App\Http\AppAPI\Controllers\Admin\Auth;
 
 use App\Http\AppAPI\Controllers\Controller;
-use App\Http\AppAPI\Requests\Admin\AdminRegisterRequest;
+use App\Http\AppAPI\Requests\Admin\APIAdminUserRegisterRequest;
 use Domain\Users\Admins\Actions\AdminUserCreateAction;
 use Domain\Admins\Actions\AdminUserCreateTokenAction;
 use Illuminate\Http\JsonResponse;
@@ -32,10 +32,10 @@ class APIAdminUserRegisterController extends Controller
     }
 
     /**
-     * @param AdminRegisterRequest $request
+     * @param APIAdminUserRegisterRequest $request
      * @return JsonResponse
      */
-    public function register(AdminRegisterRequest $request): JsonResponse
+    public function register(APIAdminUserRegisterRequest $request): JsonResponse
     {
         $admin = $this->adminCreateAction->execute($request->all());
         $token = $this->adminCreateTokenAction->execute($request->all());

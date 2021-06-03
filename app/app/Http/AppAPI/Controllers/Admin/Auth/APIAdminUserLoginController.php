@@ -3,7 +3,7 @@
 namespace App\Http\AppAPI\Controllers\Admin\Auth;
 
 use App\Http\AppAPI\Controllers\Controller;
-use App\Http\AppAPI\Requests\Admin\AdminLoginRequest;
+use App\Http\AppAPI\Requests\Admin\APIAdminUserLoginRequest;
 use Domain\Users\Admins\Actions\AdminUserLoginAction;
 use Domain\Users\Admins\Actions\AdminUserLogoutAction;
 use Illuminate\Http\JsonResponse;
@@ -33,11 +33,11 @@ class APIAdminUserLoginController extends Controller
     }
 
     /**
-     * @param AdminLoginRequest $request
+     * @param APIAdminUserLoginRequest $request
      * @return JsonResponse
      * @throws ValidationException
      */
-    public function login(AdminLoginRequest $request): JsonResponse
+    public function login(APIAdminUserLoginRequest $request): JsonResponse
     {
         return response()->json($this->adminLoginAction->execute($request->all()), 201);
     }

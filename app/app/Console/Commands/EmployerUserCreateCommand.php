@@ -3,25 +3,25 @@
 namespace App\Console\Commands;
 
 use Domain\Users\Actions\UsersCreatedSendEmailAction;
-use Domain\Users\Admins\Actions\AdminUserCreateAction;
-use Illuminate\Console\Command;
+use Domain\Users\Employers\Actions\EmployerUserCreateAction;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Console\Command;
 
-class AdminUserCreateCommand extends Command
+class EmployerUserCreateCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'create:admin-user';
+    protected $signature = 'create:employer-user';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create new user for admin application';
+    protected $description = 'Create new user for employer application';
 
     /**
      * Create a new command instance.
@@ -38,7 +38,8 @@ class AdminUserCreateCommand extends Command
      *
      * @return int
      */
-    public function handle(AdminUserCreateAction $createAction, UsersCreatedSendEmailAction $emailAction)
+    public function handle(EmployerUserCreateAction $employerUserCreateAction,
+                           UsersCreatedSendEmailAction $usersCreatedSendEmailAction)
     {
         $fields['name'] = $this->ask('Name?');
         $fields['email'] = $this->ask('Email?');
@@ -47,13 +48,13 @@ class AdminUserCreateCommand extends Command
         $validator = Validator::make($fields,
             [
                 'name' => ['required'],
-                'email' => ['required', 'email', 'unique:admins,email'],
+                'email' => ['required', 'email', 'unique:employers,email'],
                 'password' => ['required', 'min:8']
             ]
         );
 
         if ($validator->fails()) {
-            $this->info('Admin user is not created. See messages below:');
+            $this->info('Employer user is not created. See messages below:');
 
             foreach ($validator->errors()->all() as $error) {
                 $this->error($error);
@@ -61,11 +62,10 @@ class AdminUserCreateCommand extends Command
             return 1;
         }
 
-        $admin = $createAction->execute($fields);
-        $emailAction->execute($fields['email'], $fields);
+        $admin = $employerUserCreateAction->execute($fields);
+        $usersCreatedSendEmailAction->execute($fields['email'], $fields);
 
-//        dd($admin->tokens()->where('name', 'spa')->count());
-        $this->info('Admin user created');
+        $this->info('Employer user created');
 
         return 0;
     }
