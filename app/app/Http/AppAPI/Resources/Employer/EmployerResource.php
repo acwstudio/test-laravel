@@ -24,6 +24,8 @@ class EmployerResource extends JsonResource
                 'name' => $this->name,
                 'email' => $this->email,
                 'banned' => $this->banned,
+                'test' => $request->user()->tokens->first()->tokenable_type,
+                'test1' => Employer::class,
                 'created_at' => $this->created_at,
                 'updated_at' => $this->updated_at,
             ],

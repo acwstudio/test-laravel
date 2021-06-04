@@ -10,7 +10,11 @@ use Spatie\QueryBuilder\QueryBuilder;
 
 class APIEmployerUserShowController extends Controller
 {
-    public function show($id)
+    /**
+     * @param $id
+     * @return EmployerResource
+     */
+    public function show($id): EmployerResource
     {
         $employer = QueryBuilder::for(Employer::class)
             ->where('id', $id)

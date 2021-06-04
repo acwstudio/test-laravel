@@ -29,7 +29,7 @@ class EmployerUserLoginAction
 
         if ($employer->tokens()->where('name', $data['client'])->count() === 0) {
 
-            $token = $employer->createToken($data['client'], ['admin','customer'])->plainTextToken;
+            $token = $employer->createToken($data['client'], ['employer'])->plainTextToken;
             return compact('employer', 'token');
 
         } else {

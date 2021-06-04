@@ -24,7 +24,7 @@ namespace App\Models{
 
 namespace App\Models{
 /**
- * App\Models\User
+ * App\Models\APIEmployerUserUpdateController
  *
  * @property int $id
  * @property string $name

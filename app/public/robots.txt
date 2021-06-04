@@ -1,2 +1,2 @@
-User-agent: *
+APIEmployerUserUpdateController-agent: *
 Disallow:

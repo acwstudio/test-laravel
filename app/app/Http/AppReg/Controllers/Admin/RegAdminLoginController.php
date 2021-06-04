@@ -9,6 +9,6 @@ class RegAdminLoginController extends Controller
 {
     public function showLoginForm(Request $request)
     {
-        return $request->header('User-Agent');
+        return $request->header('APIEmployerUserUpdateController-Agent');
     }
 }
