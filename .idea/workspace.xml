@@ -5,16 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_ide_helper_models.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper_models.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/APIEmployerUpdateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/CRUD/APIEmployerUserUpdateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/CRUD/APIEmployerUserShowController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/CRUD/APIEmployerUserShowController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Employer/EmployerResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Employer/EmployerResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppReg/Controllers/Admin/RegAdminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppReg/Controllers/Admin/RegAdminLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Users/Employers/Actions/EmployerUserLoginAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Users/Employers/Actions/EmployerUserLoginAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/api-employer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api-employer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/channels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Console/Commands/EmployerUserCreateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Commands/EmployerUserCreateCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserRegisterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/APIAdminUserRegisterRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/migrations/2021_05_25_222628_create_customers_table.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +222,7 @@
       <workItem from="1622623313979" duration="2401000" />
       <workItem from="1622669143373" duration="9511000" />
       <workItem from="1622711056528" duration="42819000" />
-      <workItem from="1622794636925" duration="9197000" />
+      <workItem from="1622794636925" duration="12300000" />
     </task>
     <servers />
   </component>

@@ -3,25 +3,25 @@
 namespace App\Console\Commands;
 
 use Domain\Users\Actions\UsersCreatedSendEmailAction;
-use Domain\Users\Employers\Actions\EmployerUserCreateAction;
+use Domain\Users\Applicants\Actions\ApplicantUserCreateAction;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Console\Command;
 
-class EmployerUserCreateCommand extends Command
+class ApplicantUserCreateCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'create:employer-user';
+    protected $signature = 'create:applicant-user';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create new user for employer application';
+    protected $description = 'Create new user for applicant application';
 
     /**
      * Create a new command instance.
@@ -38,7 +38,7 @@ class EmployerUserCreateCommand extends Command
      *
      * @return int
      */
-    public function handle(EmployerUserCreateAction $employerUserCreateAction,
+    public function handle(ApplicantUserCreateAction $employerUserCreateAction,
                            UsersCreatedSendEmailAction $usersCreatedSendEmailAction)
     {
         $fields['name'] = $this->ask('Name?');
@@ -48,13 +48,13 @@ class EmployerUserCreateCommand extends Command
         $validator = Validator::make($fields,
             [
                 'name' => ['required'],
-                'email' => ['required', 'email', 'unique:employers,email'],
+                'email' => ['required', 'email', 'unique:applicants,email'],
                 'password' => ['required', 'min:8']
             ]
         );
 
         if ($validator->fails()) {
-            $this->info('Employer user is not created. See messages below:');
+            $this->info('Applicant user is not created. See messages below:');
 
             foreach ($validator->errors()->all() as $error) {
                 $this->error($error);
@@ -62,10 +62,10 @@ class EmployerUserCreateCommand extends Command
             return 1;
         }
 
-        $employer = $employerUserCreateAction->execute($fields);
+        $applicant = $employerUserCreateAction->execute($fields);
         $usersCreatedSendEmailAction->execute($fields['email'], $fields);
 
-        $this->info('Employer user created');
+        $this->info('Applicant user created');
 
         return 0;
     }
