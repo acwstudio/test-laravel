@@ -3,7 +3,6 @@
 
 namespace Domain\Users\Employers\Actions;
 
-
 use Domain\Users\Employers\Models\Employer;
 use Illuminate\Validation\ValidationException;
 use Hash;
@@ -12,9 +11,10 @@ class EmployerUserLoginAction
 {
     /**
      * @param array $data
+     * @return array
      * @throws ValidationException
      */
-    public function execute(array $data)
+    public function execute(array $data): array
     {
         /** @var Employer $employer */
         $employer = Employer::where('email', $data['email'])->first();
@@ -29,13 +29,13 @@ class EmployerUserLoginAction
 
         if ($employer->tokens()->where('name', $data['client'])->count() === 0) {
 
-            $token = $employer->createToken($data['client'], ['employer'])->plainTextToken;
+            $token = $employer->createToken($data['client'], ['employer','applicant'])->plainTextToken;
             return compact('employer', 'token');
 
         } else {
 
             $employer->tokens()->delete();
-            $token = $employer->createToken($data['client'], ['admin','customer'])->plainTextToken;
+            $token = $employer->createToken($data['client'], ['employer','applicant'])->plainTextToken;
             return compact('employer', 'token');
 
         }

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'v1/employer', 'as' => 'api.employers.'], function () {
 
-    /*************** AUTH ROUTES ****************/
+    /*************** AUTH EMPLOYER ROUTES ****************/
 
     Route::group(['middleware' => ['guest']], function () {
         Route::post('/login', [APIEmployerUserLoginController::class, 'login'])->name('login');

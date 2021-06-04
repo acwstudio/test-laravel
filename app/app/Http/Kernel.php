@@ -65,6 +65,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 
         'api.employer' => \App\Http\AppAPI\Middleware\APIEmployerMiddleware::class,
+        'api.applicant' => \App\Http\AppAPI\Middleware\APIApplicantMiddleware::class,
         'api.admin' => \App\Http\AppAPI\Middleware\APIAdminMiddleware::class,
     ];
 }
