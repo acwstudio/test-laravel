@@ -17,13 +17,10 @@ class APIAdminMiddleware
      */
     public function handle(Request $request, Closure $next): mixed
     {
-        /** @var \Domain\Users\Admins\Models\Admin $admin */
-        $admin = auth()->user();
-
-        if ($admin->tokenCan('admin')) {
+        if ($request->user()->tokenCan('admin')) {
             return $next($request);
         }
 
-        return response()->json(['message' => 'Not Authorized'], 401);
+        return response()->json(['message' => 'Not Authorized Admin'], 401);
     }
 }

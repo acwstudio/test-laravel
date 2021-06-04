@@ -28,9 +28,9 @@ class APIAdminUserUpdateRequest extends FormRequest
             'data.id' => 'required|integer|in:' . request()->segment('5'),
             'data.type' => 'required|in:admins',
             'data.attributes' => 'required|array',
-            'data.attributes.name' => 'required|string',
-            'data.attributes.email' => 'required|string|email|max:255|unique:admins,email',
-            'data.attributes.password' => 'required|string|min:8|confirmed',
+            'data.attributes.name' => 'string',
+            'data.attributes.email' => 'string|email|max:255|unique:admins,email',
+            'data.attributes.password' => 'string|min:8',
         ];
     }
 

@@ -29,13 +29,13 @@ class AdminUserLoginAction
 
         if ($admin->tokens()->where('name', $data['client'])->count() === 0) {
 
-            $token = $admin->createToken($data['client'], ['admin','customer'])->plainTextToken;
+            $token = $admin->createToken($data['client'], ['admin','employer'])->plainTextToken;
             return compact('admin', 'token');
 
         } else {
 
             $admin->tokens()->delete();
-            $token = $admin->createToken($data['client'], ['admin','customer'])->plainTextToken;
+            $token = $admin->createToken($data['client'], ['admin','employer'])->plainTextToken;
             return compact('admin', 'token');
 
         }

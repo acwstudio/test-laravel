@@ -3,8 +3,6 @@
 namespace App\Http\AppAPI\Middleware;
 
 use Closure;
-use Domain\Customers\Models\Customer;
-use Domain\Users\Employers\Models\Employer;
 use Illuminate\Http\Request;
 
 class APIEmployerMiddleware
@@ -12,19 +10,16 @@ class APIEmployerMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next): mixed
     {
-        /** @var Employer $employer */
-        $employer = auth()->user();
-
-        if ($employer->tokenCan('employer')) {
+        if ($request->user()->tokenCan("employer")) {
             return $next($request);
         }
 
-        return response()->json(['message' => 'Not Authorized'], 401);
+        return response()->json(['message' => 'Not Authorized Employer'], 401);
     }
 }

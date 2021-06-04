@@ -46,7 +46,7 @@ return [
             'provider' => 'admins',
         ],
 
-        'web-customer' => [
+        'web-employer' => [
             'driver' => 'session',
             'provider' => 'customers',
         ],
@@ -95,12 +95,12 @@ return [
 
         'admins' => [
             'driver' => 'eloquent',
-            'model' => \Domain\Users\Admins\Models\Admin::class,
+            'model' => Domain\Users\Admins\Models\Admin::class,
         ],
 
         'employers' => [
             'driver' => 'eloquent',
-            'model' => Domain\Employers\Models\Employer::class,
+            'model' => Domain\Users\Employers\Models\Employer::class,
         ],
 
         // 'users' => [

@@ -3,8 +3,9 @@
 namespace App\Http\AppAPI\Resources\Employer;
 
 use App\Http\AppAPI\Resources\Token\TokenIdentifierResource;
+use Domain\Users\Employers\Models\Employer;
 use Illuminate\Http\Resources\Json\JsonResource;
-use function route;
+use Illuminate\Support\Facades\Auth;
 
 class EmployerResource extends JsonResource
 {

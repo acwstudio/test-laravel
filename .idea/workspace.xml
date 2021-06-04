@@ -2,38 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a33da31-5900-46e3-8677-0e16da3ce6ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/CRUD/APIEmployerUserIndexController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/CRUD/APIEmployerUserDestroyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/Auth/APIAdminUserLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserIndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserStoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Admin/CRUD/APIAdminUserStoreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerIndexController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerLoginController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerRegisterController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerTokensRelatedController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Customer/APICustomerTokensRelationshipsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/APIEmployerCreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/CRUD/APIEmployerUserStoreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/APIEmployerIndexController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Middleware/APICustomerMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Middleware/APIEmployerMiddleware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Customer/CustomerLoginRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Customer/CustomerRegisterRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Employer/EmployerCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Employer/APIEmployerUserCreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Customer/CustomerCollection.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Customer/CustomerIdentifierResource.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Customer/CustomerResource.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/APIEmployerDeleteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/CRUD/APIEmployerUserShowController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Controllers/Employer/APIEmployerShowController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Middleware/APIAdminMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Middleware/APIAdminMiddleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Middleware/APIEmployerMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Middleware/APIEmployerMiddleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/APIAdminUserUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Requests/Admin/APIAdminUserUpdateRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Employer/EmployerResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/AppAPI/Resources/Employer/EmployerResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerCreateAction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerCreateTokenAction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerLoginAction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Customers/Actions/CustomerLogoutAction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/domain/Customers/Models/Customer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/domain/Users/Admins/Actions/AdminUserLoginAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/domain/Users/Admins/Actions/AdminUserLoginAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/api-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/api-customer.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/api-employer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api-employer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/laravel-app/project/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker/laravel-app/project/app/Http/Kernel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +225,8 @@
       <workItem from="1622532623522" duration="37600000" />
       <workItem from="1622623313979" duration="2401000" />
       <workItem from="1622669143373" duration="9511000" />
-      <workItem from="1622711056528" duration="30081000" />
+      <workItem from="1622711056528" duration="42819000" />
+      <workItem from="1622794636925" duration="2557000" />
     </task>
     <servers />
   </component>
