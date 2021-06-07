@@ -35,7 +35,7 @@ class APIAdminUserStoreController extends Controller
         $admin = $this->adminUserCreateAction->execute($dataAttributes);
 
         return response()->json([
-            new AdminResource($admin),
+            'data' => new AdminResource($admin),
             'password' => $dataAttributes['password']
         ]);
     }

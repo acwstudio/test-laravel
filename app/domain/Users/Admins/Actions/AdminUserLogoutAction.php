@@ -5,18 +5,17 @@ namespace Domain\Users\Admins\Actions;
 
 use Domain\Users\Admins\Models\Admin;
 use Illuminate\Http\JsonResponse;
-use function auth;
-use function response;
 
 class AdminUserLogoutAction
 {
     /**
+     * @param $id
      * @return JsonResponse
      */
-    public function execute(): JsonResponse
+    public function execute($id): JsonResponse
     {
         /** @var Admin $admin */
-        $admin = auth()->user();
+        $admin = Admin::findOrFail($id);
 
         $admin->tokens()->delete();
 

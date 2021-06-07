@@ -15,6 +15,13 @@ class APIAdminUserDestroyController extends Controller
      */
     public function destroy(AdminUserDestroyAction $adminUserDestroyAction, $id): JsonResponse
     {
-        return $adminUserDestroyAction->execute($id);
+        if (auth()->user()->getAuthIdentifier() === $id) {
+            return $adminUserDestroyAction->execute($id);
+        }
+
+        return response()->json([
+            "error" => "You are not the account's owner"
+        ], 403);
+
     }
 }

@@ -3,7 +3,8 @@
 namespace App\Http\AppAPI\Resources\Token;
 
 use App\Http\AppAPI\Resources\Admin\AdminIdentifierResource;
-use App\Http\AppAPI\Resources\Customer\CustomerIdentifierResource;
+use App\Http\AppAPI\Resources\Applicant\ApplicantIdentifierResource;
+use App\Http\AppAPI\Resources\Employer\EmployerIdentifierResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class TokenResource extends JsonResource
@@ -41,16 +42,16 @@ class TokenResource extends JsonResource
     }
 
     /**
-     * @return CustomerIdentifierResource|AdminIdentifierResource|string
+     * @return AdminIdentifierResource|ApplicantIdentifierResource|EmployerIdentifierResource
      */
-    private function typeResource(): CustomerIdentifierResource|AdminIdentifierResource|string
+    private function typeResource(): EmployerIdentifierResource|AdminIdentifierResource|ApplicantIdentifierResource
     {
-        if ($this->tokenable_type === 'Domain\Admins\Models\Admin') {
+        if ($this->tokenable_type === 'Domain\Users\Admins\Models\Admin') {
             return new AdminIdentifierResource($this->whenLoaded('tokenable'));
-        } elseif ($this->tokenable_type === 'Domain\Customers\Models\Customer') {
-            return new CustomerIdentifierResource($this->whenLoaded('tokenable'));
+        } else if ($this->tokenable_type === 'Domain\Users\Employers\Models\Employer') {
+            return new EmployerIdentifierResource($this->whenLoaded('tokenable'));
+        } else if ($this->tokenable_type === 'Domain\Users\Applicants\Models\Applicant') {
+            return new ApplicantIdentifierResource($this->whenLoaded('tokenable'));
         }
-
-        return 'There is no resource';
     }
 }

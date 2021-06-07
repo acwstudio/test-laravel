@@ -21,14 +21,16 @@ class AdminResource extends JsonResource
             'attributes' => [
                 'name' => $this->name,
                 'email' => $this->email,
+//                'request' => $request->segments(),
+//                'client' => $request->user()->currentAccessToken()->name,
                 'created_at' => $this->created_at,
                 'updated_at' => $this->updated_at,
             ],
             'relationships' => [
                 'tokens' => [
                     'links' => [
-                        'self' => route('api.admins.user.relationships.tokens', ['id' => $this->id]),
-                        'related' => route('api.admins.user.tokens', ['id' => $this->id])
+                        'self' => route('api.admins.admin.relationships.tokens', ['id' => $this->id]),
+                        'related' => route('api.admins.admin.tokens', ['id' => $this->id])
                     ],
                     'data' => TokenIdentifierResource::collection($this->whenLoaded('tokens'))
                 ],

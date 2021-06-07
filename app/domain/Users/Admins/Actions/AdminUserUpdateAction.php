@@ -3,18 +3,16 @@
 
 namespace Domain\Users\Admins\Actions;
 
-
 use Domain\Users\Admins\Models\Admin;
 use Hash;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use phpDocumentor\Reflection\Types\Integer;
 
 class AdminUserUpdateAction
 {
     /**
      * @param array $data
-     * @param Integer $id
+     * @param int $id
      * @return Collection|Model|Admin|Admin[]
      */
     public function execute(array $data, int $id): Admin|array|Collection|Model

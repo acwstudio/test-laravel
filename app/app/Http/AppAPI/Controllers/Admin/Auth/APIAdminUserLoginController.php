@@ -19,7 +19,6 @@ class APIAdminUserLoginController extends Controller
     /**
      * APIAdminUserLoginController constructor.
      * @param AdminUserLoginAction $adminLoginAction
-     * @param AdminUserLogoutAction $adminLogoutAction
      */
     public function __construct(AdminUserLoginAction $adminLoginAction)
     {
@@ -33,6 +32,8 @@ class APIAdminUserLoginController extends Controller
      */
     public function login(APIAdminUserLoginRequest $request): JsonResponse
     {
-        return response()->json($this->adminLoginAction->execute($request->all()), 201);
+        $dataAttributes = $request->input('data.attributes');
+
+        return response()->json($this->adminLoginAction->execute($dataAttributes), 201);
     }
 }

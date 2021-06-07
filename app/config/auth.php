@@ -68,6 +68,12 @@ return [
             'provider' => 'employers',
             'hash' => false,
         ],
+
+        'api-applicant' => [
+            'driver' => 'sanctum',
+            'provider' => 'applicants',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -101,6 +107,11 @@ return [
         'employers' => [
             'driver' => 'eloquent',
             'model' => Domain\Users\Employers\Models\Employer::class,
+        ],
+
+        'applicants' => [
+            'driver' => 'eloquent',
+            'model' => Domain\Users\Applicants\Models\Applicant::class,
         ],
 
         // 'users' => [
@@ -141,6 +152,13 @@ return [
 
         'employers' => [
             'provider' => 'employers',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'applicants' => [
+            'provider' => 'applicants',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

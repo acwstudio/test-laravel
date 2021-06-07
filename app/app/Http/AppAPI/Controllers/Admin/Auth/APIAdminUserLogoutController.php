@@ -15,6 +15,8 @@ class APIAdminUserLogoutController extends Controller
      */
     public function logout(AdminUserLogoutAction $adminUserLogoutAction): JsonResponse
     {
-        return $adminUserLogoutAction->execute();
+        $id = auth()->user()->getAuthIdentifier();
+
+        return $adminUserLogoutAction->execute($id);
     }
 }

@@ -24,9 +24,12 @@ class APIAdminUserLoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'client' => 'required|string|in:mobile,postman,spa,server',
-            'email' => 'required|string|email|max:255|exists:admins,email',
-            'password' => 'required|string|min:8',
+            'data' => 'required|array',
+            'data.type' => 'required|in:admins',
+            'data.attributes' => 'required|array',
+            'data.attributes.client' => 'required|string|in:mobile,spa,server',
+            'data.attributes.email' => 'required|string|email|max:255|exists:admins,email',
+            'data.attributes.password' => 'required|string|min:8',
         ];
     }
 
@@ -38,7 +41,7 @@ class APIAdminUserLoginRequest extends FormRequest
     public function messages()
     {
         return [
-            'client.in' => 'The :attribute must be one of these items: mobile, postman, spa, server',
+            'data.attributes.client.in' => 'The :attribute must be one of these items: mobile, postman, spa, server',
         ];
     }
 }

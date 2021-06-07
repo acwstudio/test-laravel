@@ -30,13 +30,13 @@ class ApplicantUserLoginAction
 
         if ($applicant->tokens()->where('name', $data['client'])->count() === 0) {
 
-            $token = $applicant->createToken($data['client'], ['employer','applicant'])->plainTextToken;
+            $token = $applicant->createToken($data['client'], ['applicant'])->plainTextToken;
             return compact('applicant', 'token');
 
         } else {
 
             $applicant->tokens()->delete();
-            $token = $applicant->createToken($data['client'], ['employer','applicant'])->plainTextToken;
+            $token = $applicant->createToken($data['client'], ['applicant'])->plainTextToken;
 
             return compact('applicant', 'token');
 
